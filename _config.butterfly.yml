@@ -68,10 +68,11 @@ social:
 # --------------------------------------
 # Image Settings
 # --------------------------------------
-
+# 网址favicon
 favicon: /img/logo.png
 
 avatar:
+  # 博客作者头像
   img: /img/avatar.jpg
   effect: false
 
