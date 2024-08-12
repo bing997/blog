@@ -69,7 +69,7 @@ social:
 # Image Settings
 # --------------------------------------
 # 网址favicon
-favicon: /img/logo.png
+favicon: /images/logo.png
 
 avatar:
   # 博客作者头像
@@ -81,10 +81,10 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: /img/bg.png
 
 # The banner image of index page
-index_img: /img/bg.png
+index_img:
 
 # The banner image of archive page
 archive_img:
@@ -110,7 +110,7 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background:
+background: /img/bg.png
 
 cover:
   # Disable the cover or not
