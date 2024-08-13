@@ -141,15 +141,21 @@ error_404:
   subtitle: 'Page Not Found'
   background: /img/error-page.png
 
+
 post_meta:
   # Home Page
   page:
     # Choose: created / updated / both
+    # # created or updated or both 主页文章日期是创建日或者更新日或都显示
     date_type: created
     # Choose: date / relative
+    # date/relative 显示日期还是相对日期
     date_format: date
+    # true or false 主页是否显示分类
     categories: true
-    tags: false
+    # true or false 主页是否显示标签
+    tags: true
+    # true or false 显示描述性文字
     label: true
   post:
     # Choose: left / center
@@ -208,7 +214,7 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
   length: 500
 
