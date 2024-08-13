@@ -4,6 +4,7 @@ date: 2024-08-08 17:04:05
 tags: 
     - test
     - boostrap
+categories: boostrap
 cover: https://www.qycn.com/uploads/allimg/2022/05/3067872445316550925.jpg
 # 是否显示文章封面
 index_enable: true 
@@ -17,6 +18,7 @@ default_cover:
 sticky: true  # 设置为 true 即可置顶
 description: "boostrap"
 ---
+
 ## boostrap框架
 ### 1. 基本结构
 Container: 包裹页面内容，分为.container和.container-fluid两种。
