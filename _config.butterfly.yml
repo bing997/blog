@@ -27,6 +27,10 @@ menu:
  文档 || fas fa-archive:
     标签: /tags/ || fas fa-tags
     分类: /categories/ || fas fa-folder-open
+ 爱好: || fas fa-heartbeat:
+    图片: /img || fas fa-images
+    书籍: /books || fas fa-book
+ 项目: /project
  友链: /link/ || fas fa-link
  关于: /about/ || fas fa-heart
 
@@ -900,7 +904,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999
   mobile: false
 
