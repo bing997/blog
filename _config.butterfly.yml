@@ -23,14 +23,13 @@ menu:
   #   Movie: /movies/ || fas fa-video
  首页: / || fas fa-home
  时间轴: /archives/ || fas fa-archive
- 搜索: /search/ || fas fa-search
  文档 || fas fa-archive:
     标签: /tags/ || fas fa-tags
     分类: /categories/ || fas fa-folder-open
- 爱好: || fas fa-heartbeat:
-    图片: /img || fas fa-images
-    书籍: /books || fas fa-book
- 项目: /project
+ 爱好 || fas fa-heartbeat:
+    图片: /img/ || fas fa-images
+    书籍: /books/ || fas fa-book
+ 项目: /project/ || fas fa-r-project
  友链: /link/ || fas fa-link
  关于: /about/ || fas fa-heart
 
