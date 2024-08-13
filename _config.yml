@@ -11,6 +11,12 @@ author: Super Bing
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
+#添加刚刚用npm下载插件的配置在_config文件中 同时实现全局音乐 将asset_inject设置成false
+aplayer:
+  enable: true
+  asset_inject: false
+
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://bing997.github.io/blog
