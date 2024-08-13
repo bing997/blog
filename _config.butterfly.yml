@@ -179,11 +179,18 @@ index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
 index_top_img_height:
 
+
 # The subtitle on homepage
 subtitle:
-  enable: false
+  # 启用副标题
+  enable: true
   # Typewriter Effect
+  # 启用打字效果
   effect: true
+  startDelay: 300 # 开始打字前的延迟时间，单位：毫秒
+   typeSpeed: 150  # 打字速度，单位：毫秒
+  backSpeed: 50   # 删除速度，单位：毫秒
+  loop: true      # 是否循环打字
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
@@ -197,6 +204,8 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - "我们不需要成为完美的人,接受自己的不完美,才能过上更轻松自在的生活"
+    - "We don't need to be perfect and accept our imperfections in order to live a more relaxed life"
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
