@@ -5,7 +5,7 @@ tags:
     - bootstrap
     - 教程
 categories: bootstrap
-cover: ![alt text](image.png)
+cover: /images/image.png
 index_enable: true # 是否显示文章封面
 aside_enable: true 
 archives_enable: true 
@@ -21,7 +21,7 @@ Bootstrap 来自 Twitter(推特)，是目前最受欢迎的前端框架。Bootst
 
 HTML定义页面元素，CSS定义页面布局，而JavaScript负责页面元素的响应。Bootstrap将HTML、CSS和JavaScript封装成一个个功能组件，用起来简洁灵活，使得 Web 开发更加快捷。
 
-![](20240814120416.png)
+![](/images/20240814120416.png)
 
 Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app。
 
