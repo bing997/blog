@@ -983,9 +983,14 @@ note:
 
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
+  loadjs: true          # 在 Pjax 完成后加载 JavaScript
+  cache: false          # 是否启用 Pjax 缓存
+  maxCacheLength: 20    # Pjax 缓存的最大条目数
+  delay: 0              # 延迟加载的时间（毫秒）
+  timeout: 3000         # Pjax 请求的超时时间（毫秒）
   # Exclude the specified pages from pjax, such as '/music/'
-  exclude:
+  exclude: []
     # - /xxxxxx/
 
 # Inject the css and script (aplayer/meting)
@@ -1058,7 +1063,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
-    - <div class="aplayer no -destroy" data-id="866776925" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay=" true"> </div>
+    - <div class="aplayer no-destroy" data-id="866776925" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay=" true"> </div>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work

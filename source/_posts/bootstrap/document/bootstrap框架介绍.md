@@ -3,8 +3,8 @@ title: boostrap框架介绍
 date: 2024-08-08 17:04:05
 tags: 
     - test
-    - boostrap
-categories: boostrap
+    - bootstrap
+categories: bootstrap
 cover: https://www.qycn.com/uploads/allimg/2022/05/3067872445316550925.jpg
 # 是否显示文章封面
 index_enable: true 
@@ -16,10 +16,10 @@ position: both
 # 当没有设置cover时，默认的封面显示
 default_cover:
 sticky: true  # 设置为 true 即可置顶
-description: "boostrap"
+description: "bootstrap"
 ---
 
-## boostrap框架
+## bootstrap框架
 ### 1. 基本结构
 Container: 包裹页面内容，分为.container和.container-fluid两种。
 Grid System: 采用12列的栅格系统，通过.row和.col-*类定义响应式布局。
