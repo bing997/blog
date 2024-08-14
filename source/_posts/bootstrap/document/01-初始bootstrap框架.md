@@ -5,23 +5,23 @@ tags:
     - bootstrap
     - 教程
 categories: bootstrap
-cover: https://www.qycn.com/uploads/allimg/2022/05/3067872445316550925.jpg
+cover: ![alt text](image.png)
 index_enable: true # 是否显示文章封面
 aside_enable: true 
 archives_enable: true 
 position: both  # 封面显示的位置 三个值可配置left , right , both 
 default_cover:  # 当没有设置cover时，默认的封面显示
-sticky: true  # 设置为 true 即可置顶
+sticky: false  # 设置为 true 即可置顶
 description: "bootstrap"
 ---
 ## 一、Bootstrap简介
 
-### 1.1　Bootstrap简述
+### Bootstrap简述
 Bootstrap 来自 Twitter(推特)，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS 和 JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。
 
 HTML定义页面元素，CSS定义页面布局，而JavaScript负责页面元素的响应。Bootstrap将HTML、CSS和JavaScript封装成一个个功能组件，用起来简洁灵活，使得 Web 开发更加快捷。
 
-![](https://upload-images.jianshu.io/upload_images/5763525-edc235541b60a96a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![](20240814120416.png)
 
 Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app。
 
@@ -30,7 +30,7 @@ Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和�
 **框架**：顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而且控制权在框架本身，有预制样式库、组件和插件。使用者要按照框架所规定的某种`规范`进行开发。
 
 
-### 1.2　为什么使用Bootstrap
+### 为什么使用Bootstrap
 <span style="color: red;">移动设备优先</span>：自 Bootstrap3 起，框架包含了贯穿于整个库移动设备优先的样式。
 + 不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。
 + 也就是说，针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。
@@ -51,12 +51,12 @@ Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和�
 它是**开源**的。
 
 
-### 1.3　如何使用Bootstrap
+### 如何使用Bootstrap
 中文官网：http://www.bootcss.com/ 
 
 官网：http://getbootstrap.com/ 
 
-#### 1.3.1 使用CDN
+#### 使用CDN
 **CSS 文件**
 > 复制以下 <link> 标签并粘贴到 <head> 标签内，注意，务必放到其它所有 CSS 样式前面。
 ```html
@@ -84,14 +84,14 @@ Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和�
 ```
 
 
-#### 1.3.2 使用本地文件
-![](/source//images/下载bootstrap.png)
+#### 使用本地文件
+![](/images/下载bootstrap.png)
 
 > 下载完成后解压`bootstrap-4.6.2-dist.zip`文件，分别导入CSS文件和JS文件即可
 
 
 
-### 1.4　简单模板
+### 简单模板
 
 ```html
 <!doctype html>
@@ -124,9 +124,9 @@ Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和�
   </body>
 </html>
 ```
-> 
 
-### 1.5　案例：第 一个Bootstrap实例
+
+### 案例：第 一个Bootstrap实例
 
 将代码保存为一个 .html 文件（例如 index.html）
 
@@ -182,17 +182,15 @@ Bootstrap5 目前是 Bootstrap 的最新版本，利用提供的 Sass 变量和�
 </body>
 </html>
 ```
-> `引入 Bootstrap CSS`：在 <head> 标签中，我们使用 <link> 标签引入 Bootstrap 的 CSS 文件。这使得我们能够使用 Bootstrap 提供的样式和组件。<br><br>
+> `引入 Bootstrap CSS`：在 <head> 标签中，我们使用 <link> 标签引入 Bootstrap 的 CSS 文件。这使得我们能够使用 Bootstrap 提供的样式和组件。
 `导航栏 (Navbar)`：这是一个基本的导航栏组件，使用了 Bootstrap 提供的 .navbar、.navbar-brand、.navbar-nav 等类。它包含了一个品牌名称和几个导航链接。
-<br><br>
 `标题和内容`：在 .container 内，使用了 .display-4 类来创建一个大标题，并通过 .lead 类创建副标题。内容块中使用了 .btn 类来创建一个按钮。
-<br><br>
 `引入 Bootstrap JS 和依赖库`：Bootstrap 的一些功能（如下拉菜单、模态框等）依赖于 JavaScript，因此需要引入 jQuery、Popper.js 和 Bootstrap 的 JavaScript 文件。
 
 
-### 1.6　Bootstrap4
+### Bootstrap4
 
-> 直接拿Bootstrap 预先定义好的样式来使用<br>
-修改Bootstrap 原来的样式，注意权重问题<br>
+> 直接拿Bootstrap 预先定义好的样式来使用
+修改Bootstrap 原来的样式，注意权重问题
 学好Bootstrap 的关键在于知道它定义了哪些样式，以及这些样式能实现什么样的效果
 
