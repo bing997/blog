@@ -3009,4 +3009,126 @@
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>02-Node.js 模块化开发</title>
+    <url>/blog/2024/09/04/node.js/document/02-Node.js%20%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h2 id="Node-js-模块化开发"><a href="#Node-js-模块化开发" class="headerlink" title="Node.js 模块化开发"></a>Node.js 模块化开发</h2><h3 id="Node-js运行环境搭建"><a href="#Node-js运行环境搭建" class="headerlink" title="Node.js运行环境搭建"></a>Node.js运行环境搭建</h3><p>Node.js是一个基于<strong>Chrome V8引擎</strong>的JavaScript代码运行<strong>环境</strong>，也可以说是一个运行时平台，提供了一些功能性的API，如<strong>文件操作API</strong>、<strong>网络通信API</strong>。<br>如果在浏览器运行JavaScript代码，浏览器就是JavaScript代码的运行环境；</p>
+<blockquote>
+<p><strong>如果在Node.js平台运行JavaScript代码，Node.js就是JavaScript代码的运行环境。</strong></p>
+</blockquote>
+<h4 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h4><p>打开Node.js官方网站，找到Node.js下载地址。</p>
+<p>官网：<a href="https://nodejs.org/en">https://nodejs.org/en</a></p>
+<p><img src="/blog/images/node02-01.png" alt="alt text"></p>
+<p><img src="/blog/images/node02-02.png" alt="alt text"></p>
+<h4 id="测试Node-js是否安装成功"><a href="#测试Node-js是否安装成功" class="headerlink" title="测试Node.js是否安装成功"></a>测试Node.js是否安装成功</h4><p>按<strong>Windows+R</strong>组合键，打开“运行”对话框，输入<strong>cmd</strong>。</p>
+<p><img src="/blog/images/node02-03.png" alt="alt text"></p>
+<p>单击<strong>确定</strong>按钮，或者直接按<strong>Enter</strong>键，会打开<strong>cmd命令提示符界面</strong>。</p>
+<p><img src="/blog/images/node02-04.png" alt="alt text"></p>
+<p>在cmd命令提示符界面中，输入命令<strong>node -v</strong>，按<strong>Enter</strong>键，显示当前安装的Node.js版本。</p>
+<p><img src="/blog/images/node02-05.png" alt="alt text"></p>
+<p>若想要退出cmd命令提示符界面，可以输入<strong>exit</strong>并按<strong>Enter</strong>键，或者单击cmd命令提示符界面右上角的“×”（关闭）按钮。</p>
+<blockquote>
+<p>多学一招：PowerShell工具测试Node.js是否安装成功<br><img src="/blog/images/node02-06.png" alt="alt text"><br><img src="/blog/images/node02-07.png" alt="alt text"></p>
+</blockquote>
+<h4 id="Node-js环境常见安装失败情况"><a href="#Node-js环境常见安装失败情况" class="headerlink" title="Node.js环境常见安装失败情况"></a>Node.js环境常见安装失败情况</h4><p>不同用户使用的系统配置是不统一的，在一些系统配置中会有不稳定的配置，可能会导致Node.js环境安装失败。</p>
+<h5 id="错误代号2503的解决方法"><a href="#错误代号2503的解决方法" class="headerlink" title="错误代号2503的解决方法"></a>错误代号2503的解决方法</h5><p>在安装过程中，突然弹出了一个消息框，提示2503错误。<br><img src="/blog/images/node02-08.png" alt="alt text"></p>
+<blockquote>
+<p>解决方法</p>
+</blockquote>
+<p>（1）使用管理员身份运行PowerShell命令提示符工具。<br><img src="/blog/images/node02-09.png" alt="alt text"></p>
+<p>（2）以管理员身份进入PowerShell命令提示符界面。<br><img src="/blog/images/node02-10.png" alt="alt text"></p>
+<h5 id="执行命令报错"><a href="#执行命令报错" class="headerlink" title="执行命令报错"></a>执行命令报错</h5><p>Node.js安装成功后，输入“node -v”命令进行验证Node运行环境是否安装成功时报错。<br><img src="/blog/images/node02-11.png" alt="alt text"></p>
+<p>在常规情况下，Node.js安装过程中，安装包会自动把Node.js的安装目录放入到系统的环境变量Path中，若是出现上图错误表明操作失败。<br><strong>解决方法是需要手动将Node.js安装目录添加到环境变量Path中。</strong></p>
+<blockquote>
+<p>解决方法：以Windows 10操作系统为例</p>
+</blockquote>
+<p>（1）首先找到Node.js的安装目录，本机的Node.js安装目录是C:\Program Files\nodejs，将该目录地址进行复制。</p>
+<p>（2）右击“此电脑”图标，选择“属性”命令，进入“系统”界面，执行如下操作。</p>
+<p><img src="/blog/images/node02-12.png" alt="alt text"></p>
+<h3 id="Node-js的基本使用"><a href="#Node-js的基本使用" class="headerlink" title="Node.js的基本使用"></a>Node.js的基本使用</h3><h4 id="Node-js的组成"><a href="#Node-js的组成" class="headerlink" title="Node.js的组成"></a>Node.js的组成</h4><p>JavaScript和Node.js的核心语法都是ECMAScript。</p>
+<p><img src="/blog/images/node02-13.png" alt="alt text"></p>
+<p><img src="/blog/images/node02-14.png" alt="alt text"></p>
+<p>JavaScript在客户端和服务端实现不同功能</p>
+<blockquote>
+<p>客户端</p>
+</blockquote>
+<p>JavaScript需要依赖<strong>浏览器</strong>提供的JavaScript引擎解析执行，浏览器还提供了对DOM的解析，所以客户端的JavaScript不仅应用了核心语法ECMAScript，而且能<strong>操作DOM</strong>和<strong>BOM</strong>，常见的应用场景如用户交互、动画特效、表单验证、发送Ajax请求等。</p>
+<blockquote>
+<p>服务器端</p>
+</blockquote>
+<p>JavaScript不依赖浏览器，而是由<strong>特定的运行环境</strong>提供的JavaScript引擎解析执行，例如Node.js。服务器端的JavaScript应用了核心语法ECMAScript，但是<strong>不操作DOM和BOM</strong>，它常常用来做一些在客户端做不到的事情，例如操作数据库、操作文件等。另外，在客户端的Ajax操作只能发送请求，而接收请求和做出响应的操作就需要服务端的JavaScript来完成。</p>
+<h4 id="Node-js基础语法"><a href="#Node-js基础语法" class="headerlink" title="Node.js基础语法"></a>Node.js基础语法</h4><p>通过node命令解析和执行一个js脚本文件的步骤如下：</p>
+<ul>
+<li>根据node命令指定的文件名称，读取js脚本文件。</li>
+<li>解析和执行JavaScript代码。</li>
+<li>将执行后的结果输出到命令行中。</li>
+</ul>
+<blockquote>
+<p>演示在Node.js中如何执行一个js脚本文件</p>
+</blockquote>
+<p>在chapter02目录下新建helloworld.js文件，编写JavaScript代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>打开命令行工具，切换到helloworld.js文件所在的目录，并输入“node helloworld.js”命令。</p>
+<p><img src="/blog/images/node02-15.png" alt="alt text"></p>
+<h4 id="Node-js全局对象global"><a href="#Node-js全局对象global" class="headerlink" title="Node.js全局对象global"></a>Node.js全局对象global</h4><p>在之前使用JavaScript的过程中，在浏览器中默认声明的变量、函数等都属于<strong>全局对象window</strong>，全局对象中的所有变量和函数在全局作用域内都是有效的。</p>
+<p>例如，我们使用console.log()进行值的输出时，console.log()属于window对象的方法，又因为window是全局对象，所以在实际使用中可以省略掉window。</p>
+<p><strong>Node.js代码的运行环境存在window对象吗?</strong></p>
+<p>在Node.js代码的运行环境中没有DOM和BOM，因此也就<strong>不存在window对象</strong>。</p>
+<p><strong>那么使用的console.log()是来自于哪里呢？</strong></p>
+<p>在Node.js中，默认就是<strong>模块化</strong>的，默认声明的变量、函数都属于当前文件模块，都是私有的，只在当前模块作用域内可以使用。</p>
+<p><strong>Node.js中是否只有模块作用域？</strong></p>
+<p>答案是否定的，如果想在全局范围内为某个变量赋值，可以应用<strong>全局对象global</strong>。Node.js中的global对象类似于浏览器中的window对象，用于<strong>定义全局命名空间</strong>，所有全局变量（除了global本身以外）都是global对象的属性，在实际使用中可以省略global。</p>
+<blockquote>
+<p>演示console.log()和setTimeout()方法在Node.js运行环境中的使用</p>
+</blockquote>
+<p>在chapter02目录下新建global.js文件，编写JavaScript代码。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">global</span>.<span class="property">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;我是global对象中的console.log()方法&#x27;</span>);</span><br><span class="line"><span class="variable language_">global</span>.<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;123&#x27;</span>);</span><br><span class="line">&#125;, <span class="number">2000</span>);</span><br></pre></td></tr></table></figure>
+<p>打开命令行工具，切换到global.js文件所在的目录，并输入“node global.js”命令<br><img src="/blog/images/node02-16.png" alt="alt text"></p>
+<h3 id="初识模块化开发"><a href="#初识模块化开发" class="headerlink" title="初识模块化开发"></a>初识模块化开发</h3><p><strong>模块化是软件的一种开发方式</strong>，利用<strong>模块化</strong>可以把一个非常复杂的系统结构细化到具体的功能点，每个功能点看作一个<strong>模块</strong>，然后通过某种规则把这些小的模块组合到一起，构成模块化系统。下面将详细讲解为什么使用模块化开发和模块化的概念。</p>
+<h4 id="传统JavaScript开发的弊端"><a href="#传统JavaScript开发的弊端" class="headerlink" title="传统JavaScript开发的弊端"></a>传统JavaScript开发的弊端</h4><p>传统浏览器端JavaScript在使用的时候存在的两大问题</p>
+<h5 id="文件依赖"><a href="#文件依赖" class="headerlink" title="文件依赖"></a>文件依赖</h5><p>在JavaScript中文件的依赖关系是由文件的<strong>引入先后顺序决定</strong>的。在开发过程中，一个页面可能需要多个文件依赖，但是仅从代码上是看不出来各个文件之间的依赖关系，这种依赖关系存在<strong>不确定性</strong>。如果更改文件的引入先后顺序，就很有可能导致程序错误。</p>
+<h5 id="命名冲突"><a href="#命名冲突" class="headerlink" title="命名冲突"></a>命名冲突</h5><p>在JavaScript中，文件与文件之间是<strong>完全开放的</strong>，并且语法<strong>本身不严谨</strong>，如果在后续引入的文件中声明了一个同名变量，则后面文件的变量会覆盖前面文件中的同名变量，这样会导致程序存在潜在的<strong>不确定性</strong>。</p>
+<h4 id="模块化的概念"><a href="#模块化的概念" class="headerlink" title="模块化的概念"></a>模块化的概念</h4><p>现实生活中手机的模块化</p>
+<p>从生产角度来看，模块化是一种生产方式，体现了以下两个特点:</p>
+<ul>
+<li>生产效率高：灵活架构，焦点分离；多人协作互不干扰；方便模块间组合、分解。</li>
+<li>维护成本低：可分单元测试；方便单个模块功能调试、升级。<br><img src="/blog/images/node02-17.png" alt="alt text"></li>
+</ul>
+<p>软件中的模块化开发</p>
+<p>从程序开发角度，模块化是一种开发模式，有以下两个特点:</p>
+<ul>
+<li>生产效率高：方便代码重用，别人开发好的模块功能可以直接拿过来使用，不需要重复开发类似的功能。</li>
+<li>维护成本低：软件开发周期中，由于需求经常发生变化，最长的阶段并不是开发阶段，而是维护阶段，使用模块化开发的方式更容易维护。<br><img src="/blog/images/node02-18.png" alt="alt text"></li>
+</ul>
+<h3 id="模块成员的导入和导出"><a href="#模块成员的导入和导出" class="headerlink" title="模块成员的导入和导出"></a>模块成员的导入和导出</h3><h4 id="exports和require"><a href="#exports和require" class="headerlink" title="exports和require()"></a>exports和require()</h4><p>在模块化开发中，<strong>一个JavaScript文件就是一个模块</strong>，模块内部定义的变量和函数默认情况下在外部无法得到。如何得到模块内部定义的变量和函数呢？</p>
+<p>Node.js为开发者提供了一个简单的模块系统，<strong>exports是模块公开的接口</strong>，**require()**用于从外部获取一个模块的接口，即获取模块的exports对象。</p>
+<p>如何在一个文件模块中获取其他文件模块的内容？</p>
+<ul>
+<li>首先需要使用require()方法加载模块；</li>
+<li>然后在被加载的模块中使用exports或者module.exports对象向外开放变量、函数等；require()函数的作用是加载文件并获取该文件中的module.exports对象接口。</li>
+</ul>
+<blockquote>
+<p>演示如何在Node.js中进行模块成员的导入和导出<br>在chapter02\demo01目录下，新建info.js文件作为被加载模块。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 声明一个add()函数用来实现加法功能</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">n1, n2</span>) =&gt; n1 + n2;</span><br><span class="line"><span class="comment">// exports对象向模块外开放add()函数</span></span><br><span class="line"><span class="built_in">exports</span>.<span class="property">add</span> = add;</span><br></pre></td></tr></table></figure>
+
+<p>在demo01目录下新建b.js文件，实现在b.js模块中导入info.js模块。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 模块导入时，模块的后缀.js可以省略</span></span><br><span class="line"><span class="keyword">const</span> info = <span class="built_in">require</span>(<span class="string">&#x27;./info&#x27;</span>);</span><br><span class="line"><span class="comment">// 结果为：30 	</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(info.<span class="title function_">add</span>(<span class="number">10</span>, <span class="number">20</span>));</span><br></pre></td></tr></table></figure>
+<p>打开命令行工具，切换到b.js文件所在的目录，并输入“node b.js”命令。<br><img src="/blog/images/node02-19.png" alt="alt text"></p>
+<p>总结Node.js的模块化开发的步骤：</p>
+<ul>
+<li>通过exports对象对模块内部的成员进行导出。</li>
+<li>通过require()方法对依赖的模块进行导入操作。</li>
+</ul>
+<h4 id="module-exports"><a href="#module-exports" class="headerlink" title="module.exports"></a>module.exports</h4><h4 id="exports和module-exports的区别"><a href="#exports和module-exports的区别" class="headerlink" title="exports和module.exports的区别"></a>exports和module.exports的区别</h4><h4 id="ES6中的export和import"><a href="#ES6中的export和import" class="headerlink" title="ES6中的export和import"></a>ES6中的export和import</h4><h3 id="Node-js系统模块"><a href="#Node-js系统模块" class="headerlink" title="Node.js系统模块"></a>Node.js系统模块</h3><h3 id="Node-js第三方模块"><a href="#Node-js第三方模块" class="headerlink" title="Node.js第三方模块"></a>Node.js第三方模块</h3><h3 id="Node-js常用开发工具"><a href="#Node-js常用开发工具" class="headerlink" title="Node.js常用开发工具"></a>Node.js常用开发工具</h3><h3 id="在项目中使用gulp"><a href="#在项目中使用gulp" class="headerlink" title="在项目中使用gulp"></a>在项目中使用gulp</h3><h3 id="项目依赖管理"><a href="#项目依赖管理" class="headerlink" title="项目依赖管理"></a>项目依赖管理</h3><h3 id="Node-js模块加载机制"><a href="#Node-js模块加载机制" class="headerlink" title="Node.js模块加载机制"></a>Node.js模块加载机制</h3>]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Node.js</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
 </search>
